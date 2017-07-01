@@ -14,6 +14,10 @@ dependencies {
     integTestRuntime project(':plugins')
 }
 
+configurations.all {
+    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+}
+
 // These public packages have classes that are tangled with the corresponding internal package.
 useClassycle(exclude: ["org/gradle/api/tasks/compile/**", "org/gradle/external/javadoc/**", ])
 

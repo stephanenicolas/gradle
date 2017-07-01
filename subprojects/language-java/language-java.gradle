@@ -8,7 +8,7 @@ dependencies {
     compile project(":languageJvm")
 
     // INCAP!
-    compile 'com.github.gradle:incap:7a3385bab0'
+    compile 'com.github.gradle:incap:master-SNAPSHOT'
 
     // TODO - get rid of this cycle
     integTestRuntime project(':plugins')

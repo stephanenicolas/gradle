@@ -7,15 +7,11 @@ dependencies {
     compile project(":platformJvm")
     compile project(":languageJvm")
 
-    // INCAP!
+    // INCAP! use --refresh-dependencies to get latest snapshot
     compile 'com.github.gradle:incap:master-SNAPSHOT'
 
     // TODO - get rid of this cycle
     integTestRuntime project(':plugins')
-}
-
-configurations.all {
-    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
 }
 
 // These public packages have classes that are tangled with the corresponding internal package.
